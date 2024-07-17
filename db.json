@@ -46,24 +46,31 @@
   "videos": [
     {
       "url": "https://www.youtube.com/embed/ODzhCZ-5f3A?si=lAmdg",
-      "titulo": "Prueba",
+      "titulo": "Prueba 8",
       "instrumento": "Guitarra",
-      "genero": "Rock",
+      "genero": "Reggae",
       "id": "51735011-49d8-4cbe-957a-15460742d34b"
     },
     {
-      "id": "f4fce797-9976-4da5-b59d-b8cb87b4c14b",
       "url": "https://www.youtube.com/embed/-oIKgXtEE1I?si=98olL",
-      "titulo": "Calaveras y Diablitos - LFC",
-      "instrumento": "Teclado",
-      "genero": "Reggae"
+      "titulo": "Calaveras y Diablo",
+      "instrumento": "Bateria",
+      "genero": "Indie",
+      "id": "f4fce797-9976-4da5-b59d-b8cb87b4c14b"
     },
     {
       "url": "https://www.youtube.com/embed/rMQLggp7EZw?si=q2MSg",
-      "titulo": "Matador 3",
-      "instrumento": "Guitarra",
+      "titulo": "Calaveras y Diablo",
+      "instrumento": "Bajo",
       "genero": "Rock",
       "id": "0ac87ce2-3176-4f90-80d1-3aed7250a9a9"
+    },
+    {
+      "url": "https://www.youtube.com/embed/3_dwKqCsbis?si=mIHiJBFIhsX_1Q6z",
+      "titulo": "Aplicaciones moviles 2024",
+      "instrumento": "Teclado",
+      "genero": "Ska",
+      "id": "96865999-186d-494a-b454-063ecc45cf4e"
     }
   ]
 }

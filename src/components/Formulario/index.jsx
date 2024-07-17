@@ -1,32 +1,36 @@
-import { useContext } from "react";
-import styles from "./Formulario.module.css";
-import InputForm from "../InputForm";
-import InputSelect from "../InputSelect";
-import { GlobalContext } from "../../context/GlobalContext";
-import swal from "sweetalert";
+import { useContext, useEffect } from "react"
+import { useForm } from "react-hook-form"
+import styles from "./Formulario.module.css"
+import { GlobalContext } from "../../context/GlobalContext"
+import swal from "sweetalert"
+import stylesSelect from "./InputSelect.module.css"
 
 function Formulario(props) {
-  const { video } = props;
   const {
-    generos,
-    categorias,
-    titulo,
-    instrumento,
-    genero,
-    url,
-    setTitulo,
-    setInstrumento,
-    setGenero,
-    setUrl,
-    setDeleteVideo,
-  } = useContext(GlobalContext);
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm()
 
-  console.log(video);
+  useEffect(() => {
+    reset({
+      titulo: props.video.titulo,
+      instrumento: props.video.instrumento,
+      genero: props.video.genero,
+      url: props.video.url
+    })
+  }, [])
 
-  const manejarEnvioForm = async (e) => {
-    e.preventDefault();
+  const { video } = props
+  const { setDeleteVideo, categorias, generos, setVideoSeleccionado } =
+    useContext(GlobalContext)
+
+  const onSubmit = async (data) => {
+    const { titulo, instrumento, genero, url } = data
 
     try {
+      setDeleteVideo(true)
       await fetch(`http://localhost:3000/videos/${video.id}`, {
         method: "PUT",
         headers: { "Content-type": "application/json" },
@@ -34,29 +38,49 @@ function Formulario(props) {
           url,
           titulo,
           instrumento,
-          genero,
-        }),
-      }).then(() => setDeleteVideo(true));
+          genero
+        })
+      })
       swal(
         "¡Cambios guardados!",
         "El video se ha editado correctamente",
         "success"
-      );
+      )
+      setDeleteVideo(false)
+      setVideoSeleccionado(null)
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
+  }
 
   return (
-    <form onSubmit={manejarEnvioForm} className={styles.form}>
-      <InputForm label="Titulo" type="text" setValor={setTitulo} />
-      <InputSelect
-        label="Instrumento"
-        opciones={categorias}
-        setValor={setInstrumento}
-      />
-      <InputSelect label="Genero" opciones={generos} setValor={setGenero} />
-      <InputForm label="URL" type="url" setValor={setUrl} />
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+      <label htmlFor="">Titulo</label>
+      <input type="text" {...register("titulo", { required: true })} />
+      <label htmlFor="">Instrumento</label>
+      <select
+        {...register("instrumento", { required: true })}
+        className={stylesSelect.selectCategoria}
+      >
+        {categorias.map((categoria) => (
+          <option key={categoria.id} value={categoria.instrumento}>
+            {categoria.instrumento}
+          </option>
+        ))}
+      </select>
+      <label htmlFor="">Genero</label>
+      <select
+        {...register("genero", { required: true })}
+        className={stylesSelect.selectCategoria}
+      >
+        {generos.map((genero) => (
+          <option key={genero.id} value={genero.genero}>
+            {genero.genero}
+          </option>
+        ))}
+      </select>
+      <label htmlFor="">URL</label>
+      <input type="text" {...register("url", { required: true })} />
       <div className={styles.divBotones}>
         <button type="submit" className={styles.btnGuardar}>
           GUARDAR
@@ -66,7 +90,7 @@ function Formulario(props) {
         </button>
       </div>
     </form>
-  );
+  )
 }
 
-export default Formulario;
+export default Formulario
