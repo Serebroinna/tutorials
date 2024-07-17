@@ -14,7 +14,7 @@ function NuevoVideo() {
   const onSubmit = async (data) => {
     const { titulo, instrumento, genero, url } = data
     try {
-      await fetch("https://fake-iwtwsabc1-ivan-beltrans-projects.vercel.app/videos", {
+      await fetch("http://localhost:3000/videos", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({

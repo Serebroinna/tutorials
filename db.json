@@ -45,32 +45,88 @@
   ],
   "videos": [
     {
-      "url": "https://www.youtube.com/embed/ODzhCZ-5f3A?si=lAmdg",
-      "titulo": "Prueba ",
+      "id": "ceb74476-6f0c-4438-b743-5c8615dd41a3",
+      "url": "https://www.youtube.com/embed/rvrSxjpWROI?si=eNw0VVKFclyiwybF",
+      "titulo": "Stir it Up - Bob Marley",
       "instrumento": "Guitarra",
-      "genero": "Reggae",
-      "id": "51735011-49d8-4cbe-957a-15460742d34b"
+      "genero": "Reggae"
     },
     {
-      "url": "https://www.youtube.com/embed/-oIKgXtEE1I?si=98olL",
-      "titulo": "Calaveras y Diablo",
-      "instrumento": "Bateria",
-      "genero": "Indie",
-      "id": "f4fce797-9976-4da5-b59d-b8cb87b4c14b"
+      "id": "995b395d-0c8a-448a-8267-e49534289cd5",
+      "url": "https://www.youtube.com/embed/OJVc1Gp41zA?si=FtXhd5A-nAulUtGG",
+      "titulo": "Island in the Sun - Wezeer",
+      "instrumento": "Guitarra",
+      "genero": "Reggae"
     },
     {
-      "url": "https://www.youtube.com/embed/rMQLggp7EZw?si=q2MSg",
-      "titulo": "Calaveras y Diablo",
+      "id": "8fd22ef5-7e98-40b8-b751-3eb62d8d154e",
+      "url": "https://www.youtube.com/embed/DUlGas6qq-I?si=kgcbimAcWbNQ7RY1",
+      "titulo": "Wicked Game - Chris Isaak",
+      "instrumento": "Guitarra",
+      "genero": "Rock"
+    },
+    {
+      "id": "3a42f4ee-bbcc-4854-819b-005d9d8ec28b",
+      "url": "https://www.youtube.com/embed/QCXNpynPkDI?si=kMmb0EiNN0WvMMMS",
+      "titulo": "Sentimiento original - Gondwana",
       "instrumento": "Bajo",
-      "genero": "Rock",
-      "id": "0ac87ce2-3176-4f90-80d1-3aed7250a9a9"
+      "genero": "Reggae"
     },
     {
-      "url": "https://www.youtube.com/embed/3_dwKqCsbis?si=mIHiJBFIhsX_1Q6z",
-      "titulo": "Aplicaciones moviles 2024",
+      "id": "0f2d09a8-a808-499a-a137-3e828603a77b",
+      "url": "https://www.youtube.com/embed/nNszif3eDTs?si=GWxcB62-8z1F1FHN",
+      "titulo": "Can't Stop - Red Hot Chili Peppers",
+      "instrumento": "Bajo",
+      "genero": "Rock"
+    },
+    {
+      "id": "1756d35f-6f65-451c-98a0-d20214a23452",
+      "url": "https://www.youtube.com/embed/rF42uRybKOI?si=uGIjFO-eWCTi35nv",
+      "titulo": "Last Train To London - Electric Light Orchestra",
+      "instrumento": "Bajo",
+      "genero": "Rock"
+    },
+    {
+      "id": "8eb7e0f5-f627-42e1-b686-c3034647314b",
+      "url": "https://www.youtube.com/embed/rMQLggp7EZw?si=6LhMRbezYHxZP6L0",
+      "titulo": "Matador - LFC",
+      "instrumento": "Bateria",
+      "genero": "Rock"
+    },
+    {
+      "id": "e2a40863-ef10-4633-8fc0-9168d7b55a75",
+      "url": "https://www.youtube.com/embed/TlqNrDsOdOM?si=WandL9BMbXu9JThV",
+      "titulo": "Sentimiento original - Gondwana",
+      "instrumento": "Bateria",
+      "genero": "Reggae"
+    },
+    {
+      "id": "9cfefed6-49b3-42e9-8650-f23516b6f878",
+      "url": "https://www.youtube.com/embed/12DN33R8b6s?si=g5Jh4K5UyBd44PKZ",
+      "titulo": "Tus ojos - Los Cafres",
+      "instrumento": "Bateria",
+      "genero": "Reggae"
+    },
+    {
+      "id": "e57390a2-b815-4444-a50c-d7155eb90fd6",
+      "url": "https://www.youtube.com/embed/-oIKgXtEE1I?si=YlNK_uvYSZa5mpa3",
+      "titulo": "Calaveras y Diablitos - LFC",
       "instrumento": "Teclado",
-      "genero": "Ska",
-      "id": "96865999-186d-494a-b454-063ecc45cf4e"
+      "genero": "Reggae"
+    },
+    {
+      "id": "81e9cc6b-ed0c-4d16-8d1d-d4bfca3f9f5d",
+      "url": "https://www.youtube.com/embed/vWtL-ffy3t8?si=8K3XVEKLkVkhx6ww",
+      "titulo": "Sin ti - King Changó",
+      "instrumento": "Teclado",
+      "genero": "Reggae"
+    },
+    {
+      "id": "697b9f64-aabb-4504-aa97-2d0a4b941ef6",
+      "url": "https://www.youtube.com/embed/2aHcHR22Jh0?si=kB71Rmx7u0XIZWga",
+      "titulo": "Kingston Town - UB40",
+      "instrumento": "Teclado",
+      "genero": "Reggae"
     }
   ]
 }
