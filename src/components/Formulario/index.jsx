@@ -1,37 +1,49 @@
-import { useContext, useEffect } from "react"
-import { useForm } from "react-hook-form"
-import styles from "./Formulario.module.css"
-import { GlobalContext } from "../../context/GlobalContext"
-import swal from "sweetalert"
-import stylesSelect from "./InputSelect.module.css"
+import { useContext, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import styles from "./Formulario.module.css";
+import { GlobalContext } from "../../context/GlobalContext";
+import swal from "sweetalert";
+import stylesSelect from "./InputSelect.module.css";
+import axios from "axios";
 
 function Formulario(props) {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors }
-  } = useForm()
+    formState: { errors },
+  } = useForm();
 
   useEffect(() => {
     reset({
       titulo: props.video.titulo,
       instrumento: props.video.instrumento,
       genero: props.video.genero,
-      url: props.video.url
-    })
-  }, [])
+      url: props.video.url,
+    });
+  }, []);
 
-  const { video } = props
+  const { video } = props;
   const { setDeleteVideo, categorias, generos, setVideoSeleccionado } =
-    useContext(GlobalContext)
+    useContext(GlobalContext);
 
   const onSubmit = async (data) => {
-    const { titulo, instrumento, genero, url } = data
-
+    const { titulo, instrumento, genero, url } = data;
     try {
-      setDeleteVideo(true)
-      await fetch(`http://localhost:3000/videos/${video.id}`, {
+      setDeleteVideo(true);
+      await axios.put(
+        `https://my-json-server.typicode.com/Serebroinna/tutorials-api/videos/${video.id}`,
+        {
+          url,
+          titulo,
+          instrumento,
+          genero,
+        },
+        {
+          headers: { "Content-type": "application/json" },
+        }
+      );
+      /*  await fetch(`https://my-json-server.typicode.com/Serebroinna/tutorials-api/videos/${video.id}`, {
         method: "PUT",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({
@@ -40,18 +52,18 @@ function Formulario(props) {
           instrumento,
           genero
         })
-      })
+      }) */
       swal(
         "¡Cambios guardados!",
         "El video se ha editado correctamente",
         "success"
-      )
-      setDeleteVideo(false)
-      setVideoSeleccionado(null)
+      );
+      setDeleteVideo(false);
+      setVideoSeleccionado(null);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -90,7 +102,7 @@ function Formulario(props) {
         </button>
       </div>
     </form>
-  )
+  );
 }
 
-export default Formulario
+export default Formulario;

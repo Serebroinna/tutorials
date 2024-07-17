@@ -13,7 +13,7 @@ export default function GlobalContextProvider({ children }) {
 
   // GET instrumentos
   useEffect(() => {
-    fetch("http://localhost:3000/instrumentos")
+    fetch("https://fake-iwtwsabc1-ivan-beltrans-projects.vercel.app/instrumentos")
       .then((response) => response.json())
       .then((data) => {
         setCategorias(data)
@@ -22,14 +22,14 @@ export default function GlobalContextProvider({ children }) {
 
   // GET generos
   useEffect(() => {
-    fetch("http://localhost:3000/generos")
+    fetch("https://fake-iwtwsabc1-ivan-beltrans-projects.vercel.app/generos")
       .then((response) => response.json())
       .then((data) => setGeneros(data))
   }, [])
 
   // GET videos
   useEffect(() => {
-    fetch("http://localhost:3000/videos")
+    fetch("https://fake-iwtwsabc1-ivan-beltrans-projects.vercel.app/videos")
       .then((response) => response.json())
       .then((data) => {
         setVideos(data)
@@ -46,7 +46,7 @@ export default function GlobalContextProvider({ children }) {
       dangerMode: true
     }).then((willDelete) => {
       if (willDelete) {
-        fetch(`http://localhost:3000/videos/${id}`, {
+        fetch(`https://fake-iwtwsabc1-ivan-beltrans-projects.vercel.app/videos/${id}`, {
           method: "DELETE",
           headers: { "Content-Type": "application/json" }
         })
