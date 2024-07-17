@@ -1,0 +1,51 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input{
+    background: transparent;
+    border: 3px solid #262626;
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--salmon);
+}
+
+.divBotones{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btnGuardar{
+    color: var(--salmon);
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    width: 130px;
+    text-align: center;
+    cursor: pointer;
+    background: black;
+    box-shadow: 1px 1px 10px var(--salmon), inset 1px 1px 10px var(--salmon);
+}
+
+.btnGuardar:hover{
+    background-color: var(--salmon);
+    color: #fff;
+}
+
+.btnLimpiar{
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    width: 130px;
+    text-align: center;
+    cursor: pointer;
+    background: transparent;
+}

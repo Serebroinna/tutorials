@@ -1,0 +1,69 @@
+{
+  "instrumentos": [
+    {
+      "id": "1",
+      "instrumento": "Guitarra",
+      "color": "#E60E0E"
+    },
+    {
+      "id": "2",
+      "instrumento": "Bajo",
+      "color": "#FF8B00"
+    },
+    {
+      "id": "3",
+      "instrumento": "Bateria",
+      "color": "#57C278"
+    },
+    {
+      "id": "4",
+      "instrumento": "Teclado",
+      "color": "#DB6EBF"
+    }
+  ],
+  "generos": [
+    {
+      "id": "1",
+      "genero": "Rock"
+    },
+    {
+      "id": "2",
+      "genero": "Reggae"
+    },
+    {
+      "id": "3",
+      "genero": "Ska"
+    },
+    {
+      "id": "4",
+      "genero": "Indie"
+    },
+    {
+      "id": "5",
+      "genero": "Post Punk"
+    }
+  ],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/embed/ODzhCZ-5f3A?si=lAmdg",
+      "titulo": "Prueba",
+      "instrumento": "Guitarra",
+      "genero": "Rock",
+      "id": "51735011-49d8-4cbe-957a-15460742d34b"
+    },
+    {
+      "id": "f4fce797-9976-4da5-b59d-b8cb87b4c14b",
+      "url": "https://www.youtube.com/embed/-oIKgXtEE1I?si=98olL",
+      "titulo": "Calaveras y Diablitos - LFC",
+      "instrumento": "Teclado",
+      "genero": "Reggae"
+    },
+    {
+      "url": "https://www.youtube.com/embed/rMQLggp7EZw?si=q2MSg",
+      "titulo": "Matador 3",
+      "instrumento": "Guitarra",
+      "genero": "Rock",
+      "id": "0ac87ce2-3176-4f90-80d1-3aed7250a9a9"
+    }
+  ]
+}

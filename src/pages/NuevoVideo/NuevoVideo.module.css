@@ -1,0 +1,62 @@
+.divMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.divH2{
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #262626;
+    width: 70%;
+}
+
+.formNuevoVideo{
+    width: 50%;
+    margin: 2rem 0;
+    padding: 20px;
+    input{
+        width: 90%;
+    }
+    select{
+        width: 90%;
+    }
+}
+
+.divBotones{
+    display: flex;
+    gap: 3rem;
+    margin-top: 20px;
+}
+
+.btnGuardar{
+    color: var(--salmon);
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    width: 130px;
+    text-align: center;
+    cursor: pointer;
+    background: black;
+    box-shadow: 1px 1px 10px var(--salmon), inset 1px 1px 10px var(--salmon);
+}
+
+.btnGuardar:hover{
+    background-color: var(--salmon);
+    color: #fff;
+}
+
+.btnLimpiar{
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    width: 130px;
+    text-align: center;
+    cursor: pointer;
+    background: transparent;
+}
