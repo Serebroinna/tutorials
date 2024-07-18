@@ -26,7 +26,7 @@ function Formulario(props) {
   const { setDeleteVideo, categorias, generos, setVideoSeleccionado } = useContext(GlobalContext);
 
   const onSubmit = async (data) => {
-    console.log(data)
+    
     const { titulo, instrumento, genero, url } = data;
     try {
       setDeleteVideo(true);
@@ -48,7 +48,7 @@ function Formulario(props) {
       setDeleteVideo(false);
       setVideoSeleccionado(null);
     } catch (error) {
-      console.log(error);
+      console.log(error); 
     }
   };
 

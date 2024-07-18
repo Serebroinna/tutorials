@@ -45,19 +45,19 @@ export default function GlobalContextProvider({ children }) {
       icon: "warning",
       buttons: true,
       dangerMode: true,
-    }).then((willDelete) => {
+    }).then(async (willDelete) =>{
       if (willDelete) {
-        fetch(
+        await fetch(
           `https://fake-api-tau-five.vercel.app/videos/${id}`,
           {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
           }
         );
-        setDeleteVideo(!deleteVideo);
         swal("Video eliminado", {
           icon: "success",
         });
+        setDeleteVideo(!deleteVideo);
       }
     });
   };
