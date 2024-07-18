@@ -23,14 +23,14 @@ function Formulario(props) {
   }, []);
 
   const { video } = props;
-  const { setDeleteVideo, categorias, generos, setVideoSeleccionado } =
-    useContext(GlobalContext);
+  const { setDeleteVideo, categorias, generos, setVideoSeleccionado } = useContext(GlobalContext);
 
   const onSubmit = async (data) => {
+    console.log(data)
     const { titulo, instrumento, genero, url } = data;
     try {
       setDeleteVideo(true);
-       await fetch(`http://localhost:3000/videos/${video.id}`, {
+       await fetch(`https://fake-api-tau-five.vercel.app/videos/${video.id}`, {
         method: "PUT",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({
